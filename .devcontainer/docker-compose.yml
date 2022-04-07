@@ -1,0 +1,16 @@
+version: '3'
+services:
+  simple-container:
+    image: nvcr.io/nvidia/tensorflow:21.08-tf2-py3
+    tty: true
+    volumes: 
+      - ../work:/work # 左がローカルファイルの場所
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    
+    

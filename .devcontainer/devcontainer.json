@@ -1,0 +1,8 @@
+{
+    "name": "container",
+    "dockerComposeFile": [
+      "docker-compose.yml"
+    ],
+    "service": "simple-container",
+    "workspaceFolder": "/work/",
+  }
